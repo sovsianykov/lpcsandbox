@@ -1,0 +1,21 @@
+.reportItemContainer {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 56px;
+  margin-top: 25px;
+  color:#093549;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: -0.19px;
+  padding-left: 16px;
+  text-align: left;
+  border-right: 8px solid transparent ;
+  cursor: pointer;
+}
+.active {
+  @extend .reportItemContainer;
+  background: #ebebeb ;
+  border-right: 8px solid #093549 ;
+
+}
