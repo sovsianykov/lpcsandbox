@@ -16,15 +16,18 @@ const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
 }) => {
   const [itemsArray, setItemsArray] = useState<any>([]);
   const [activeId, setActiveID] = useState("");
+
   useEffect(() => {
     let itemsWithFlag = items.map((item) => {
       return { ...item, activeId: activeId };
     });
     setItemsArray(itemsWithFlag);
   }, [activeId, items]);
-  const activeHandler = (id: string) => {
+
+  const activeHandler = useCallback((id: string) => {
     setActiveID(id);
-  };
+  }, []);
+
   return (
     <div className="reportsNavigationContainer">
       {itemsArray.map((el: IReportsItem) => (
