@@ -15,9 +15,6 @@ const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
   items,activeMenuItemId
 }) => {
 
-
-
-
   return (
     <div className="reportsNavigationContainer">
       <div className="menuTitle">

@@ -1,6 +1,6 @@
 export interface IItem {
     id: string;
     title: string;
-    onClick(id: string): void;
+    foo(id: string): void;
     activeId?: string ;
 }

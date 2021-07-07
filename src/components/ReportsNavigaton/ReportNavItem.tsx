@@ -11,7 +11,7 @@ export interface ItemProps {
 const ReportNavItem: FunctionComponent<ItemProps> = ({ item,activeMenuItemId}) => {
 
   const callbackHandler = useCallback(() => {
-    item.onClick(item.id);
+    item.foo(item.id);
   },[item])
 
   const navClass = classNames("reportItemContainer", {
