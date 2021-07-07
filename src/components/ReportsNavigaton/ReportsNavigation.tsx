@@ -30,6 +30,9 @@ const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
 
   return (
     <div className="reportsNavigationContainer">
+      <div className="menuTitle">
+        REPORTING
+      </div>
       {itemsArray.map((el: IReportsItem) => (
         <ReportNavItem
           onClick={() => activeHandler(el.id)}

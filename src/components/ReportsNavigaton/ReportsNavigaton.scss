@@ -1,12 +1,27 @@
+.menuTitle {
+  display: flex;
+  align-items: center;
+  margin-left: 17px;
+  width: 288px;
+  height: 66px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  color: #093549;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  text-align: left;
+  border-bottom: 2px solid #093549;
+}
 .reportItemContainer {
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 283px;
   height: 56px;
   margin-top: 25px;
   color:#093549;
   font-size: 19px;
-  font-weight: 300;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: -0.19px;
   padding-left: 16px;
   text-align: left;
