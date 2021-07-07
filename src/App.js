@@ -6,7 +6,7 @@ import ReportsNavigation from "./components/ReportsNavigaton/ReportsNavigation";
 
 function App() {
     const [itemsArr , setItemsArr] = useState(items)
-    const [activeMenuItemId , setActiveMenuItemId] = useState('1')
+    const [activeMenuItemId , setActiveMenuItemId] = useState('2')
     useEffect(()=>{
 
     })

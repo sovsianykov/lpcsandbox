@@ -1,33 +1,28 @@
-import React, {
-  FunctionComponent,
-} from "react";
+import React, { FunctionComponent } from "react";
 import { IItem } from "./types";
 import ReportNavItem from "./ReportNavItem";
-
+import styles from "./ReportsNavigaton.module.scss";
 
 export interface ReportsNavigationProps {
   items: IItem[];
   activeMenuItemId: string;
-
 }
 
 const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
-  items,activeMenuItemId
+  items,
+  activeMenuItemId,
 }) => {
-
   return (
-    <div className="reportsNavigationContainer">
-      <div className="menuTitle">
-        REPORTING
-      </div>
+    <>
+      <div className={styles.menuTitle}>REPORTING</div>
       {items.map((item: IItem) => (
         <ReportNavItem
-          activeMenuItemId={ activeMenuItemId }
+          activeMenuItemId={activeMenuItemId}
           key={item.id}
           item={item}
         />
       ))}
-    </div>
+    </>
   );
 };
 
