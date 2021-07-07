@@ -1,4 +1,4 @@
-export interface IReportsItem {
+export interface IItem {
     id: string;
     title: string;
     onClick(id: string): void;

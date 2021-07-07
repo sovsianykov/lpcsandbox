@@ -1,43 +1,33 @@
 import React, {
   FunctionComponent,
-  useCallback,
-  useEffect,
-  useState,
 } from "react";
-import { IReportsItem } from "./types";
+import { IItem } from "./types";
 import ReportNavItem from "./ReportNavItem";
 
+
 export interface ReportsNavigationProps {
-  items: IReportsItem[];
+  items: IItem[];
+  activeMenuItemId: string;
+
 }
 
 const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
-  items,
+  items,activeMenuItemId
 }) => {
-  const [itemsArray, setItemsArray] = useState<any>([]);
-  const [activeId, setActiveID] = useState("");
 
-  useEffect(() => {
-    let itemsWithFlag = items.map((item) => {
-      return { ...item, activeId: activeId };
-    });
-    setItemsArray(itemsWithFlag);
-  }, [activeId, items]);
 
-  const activeHandler = useCallback((id: string) => {
-    setActiveID(id);
-  }, []);
+
 
   return (
     <div className="reportsNavigationContainer">
       <div className="menuTitle">
         REPORTING
       </div>
-      {itemsArray.map((el: IReportsItem) => (
+      {items.map((item: IItem) => (
         <ReportNavItem
-          onClick={() => activeHandler(el.id)}
-          key={el.id}
-          item={el}
+          activeMenuItemId={ activeMenuItemId }
+          key={item.id}
+          item={item}
         />
       ))}
     </div>

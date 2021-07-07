@@ -1,30 +1,26 @@
 import React, { FunctionComponent, useCallback, useState } from "react";
 import "./ReportsNavigaton.scss";
 import classNames from "classnames";
-import { IReportsItem } from "./types";
+import { IItem } from "./types";
+
 export interface ItemProps {
-  item: IReportsItem;
-  onClick(): void;
+  item: IItem;
+  activeMenuItemId: string;
 }
 
-const ReportNavItem: FunctionComponent<ItemProps> = ({ item, onClick }) => {
+const ReportNavItem: FunctionComponent<ItemProps> = ({ item,activeMenuItemId}) => {
 
   const callbackHandler = useCallback(() => {
     item.onClick(item.id);
   },[item])
 
   const navClass = classNames("reportItemContainer", {
-    active: item.id === item.activeId,
+    active: item.id === activeMenuItemId
   });
 
   return (
-    <div className={navClass} onClick={onClick}>
-      <div
-        onClick={callbackHandler}
-        className="foo"
-      >
-        <p>{item.title}</p>
-      </div>
+    <div className={navClass} onClick={callbackHandler} >
+        {item.title}
     </div>
   );
 };
