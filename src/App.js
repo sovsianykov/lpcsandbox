@@ -13,11 +13,11 @@ function App() {
     const  header = repHeaderItem
   return (
     <div className="App">
-      {/*<ReportsNavigation*/}
-      {/*    items  = { itemsArr }*/}
-      {/*    activeMenuItemId = { activeMenuItemId }*/}
-      {/*/>*/}
-      {/*  <RepHeader header={header}/>*/}
+      <ReportsNavigation
+          items  = { itemsArr }
+          activeMenuItemId = { activeMenuItemId }
+      />
+        <RepHeader header={header}/>
      <TabNavigation items={ tabItems } activeTabItemId={'2'}/>
     </div>
   );
