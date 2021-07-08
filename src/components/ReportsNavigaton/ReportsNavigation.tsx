@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import { IItem } from "./types";
+import { IItem } from "../types";
 import ReportNavItem from "./ReportNavItem";
 import styles from "./ReportsNavigaton.module.scss";
 

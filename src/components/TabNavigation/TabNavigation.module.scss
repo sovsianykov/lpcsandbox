@@ -1,0 +1,22 @@
+.tabNavigation {
+  height: 56px;
+  .tabItem {
+    width: 198px;
+    height: 56px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #093549;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    color: #093549;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .active {
+    @extend .tabItem;
+    color: #ffffff;
+    background: #093549;
+  }
+}

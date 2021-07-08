@@ -1,0 +1,33 @@
+.header {
+  width: 430px;
+  height: 100px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #093549;
+  font-weight: 600;
+  .title {
+    text-transform: uppercase;
+    padding: 24px 0;
+    font-size: 24px;
+    letter-spacing: 2.4px;
+    text-align: left;
+
+  }
+  .subtitle {
+    text-transform: uppercase;
+    height: 14px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.7px;
+    padding: 0 14px 0 0;
+    border-right: 1px solid #093549;
+  }
+  .date {
+    display: inline-block;
+    height: 14px;
+    padding-left: 14px;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    color: #9F9F9F;
+  }
+}

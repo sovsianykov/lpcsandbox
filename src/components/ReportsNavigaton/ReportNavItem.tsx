@@ -5,7 +5,7 @@ import React, {
 } from "react";
 import styles from "./ReportsNavigaton.module.scss";
 import cn from "classnames";
-import { IItem } from "./types";
+import { IItem } from "../types";
 
 export interface ItemProps {
   item: IItem;
