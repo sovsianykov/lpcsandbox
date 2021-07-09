@@ -1,15 +1,15 @@
-import React, {FunctionComponent} from 'react';
+import React, { FunctionComponent } from 'react';
 import { ITabItem } from "../types";
 import styles from './TabNavigation.module.scss'
 import TabItem from "./TabItem";
 
-interface TabNavigationProps {
+export interface TabNavigationProps {
     items: ITabItem[];
     activeTabItemId: string;
 }
 
 
-const TabNavigation:FunctionComponent<TabNavigationProps> = ({items,activeTabItemId}) => {
+const TabNavigation:FunctionComponent<TabNavigationProps> = ({items, activeTabItemId}) => {
     return (
         <div className={styles.tabNavigation}>
             {items.map((item: ITabItem) => (
