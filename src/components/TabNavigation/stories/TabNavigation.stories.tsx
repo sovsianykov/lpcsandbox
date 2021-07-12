@@ -1,8 +1,9 @@
 import React from "react";
 import { Story } from "@storybook/react";
+
 import TabNavigation, {
   TabNavigationProps,
-} from "../../TabNavigation/TabNavigation";
+} from "../TabNavigation";
 
 export default {
   title: "TabNavigation",

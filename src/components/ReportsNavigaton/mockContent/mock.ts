@@ -13,4 +13,4 @@ export const tabItems = [
     { id : '3' , title : "Total Fund" , foo : ()=>console.log('message 3' )  },
 ];
 
-export const repHeaderItem = {title : "Carlyle Amphora Partners", numberOfAccounts: 5, date: new Date() }
+export const repHeaderItem = {title : "Carlyle Amphora Partners", numberOfAccounts: 5, date: new Date(2021,0,3) }

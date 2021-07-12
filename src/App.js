@@ -7,7 +7,7 @@ import TabNavigation from "./components/TabNavigation/TabNavigation";
 
 function App() {
     const [itemsArr , setItemsArr] = useState(items)
-    const [activeMenuItemId , setActiveMenuItemId] = useState('2')
+    const [activeMenuItemId , setActiveMenuItemId] = useState('1')
     return (
     <div className="App">
       <ReportsNavigation
