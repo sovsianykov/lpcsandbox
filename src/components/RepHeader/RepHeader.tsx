@@ -13,7 +13,6 @@ const RepHeader: FunctionComponent<RepHeaderProps> = ({ header }) => {
 
 
   const subtitle = `${header.numberOfAccounts} investor ${StringUtils.helperPluralize(header.numberOfAccounts,'account')} selected`;
-  console.log(subtitle)
 
   const displayDate = format(header.date, "'As of' MMMM d, yyyy");
   return (

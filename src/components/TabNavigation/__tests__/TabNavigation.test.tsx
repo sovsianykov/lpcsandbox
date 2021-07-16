@@ -11,12 +11,14 @@ describe("<TabNavigation/>", () =>{
         const mockItems = [{ id : '1', title : "Your Interests" , foo : onClickMock }];
         const activeId = "1"
         const { container } = render (
-            <TabNavigation items={mockItems} activeTabItemId={activeId}/>
+            <TabNavigation items={mockItems} activeTabItemId={activeId} onClick={onClickMock}/>
         );
+
         //Act
         userEvent.click(getByText(container, mockItems[0].title))
 
         //Assert
         expect(onClickMock).toHaveBeenCalledTimes(1)
+        expect(getByText(container, mockItems[0].title)).toHaveClass('active')
     });
 });

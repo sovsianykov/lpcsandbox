@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, {FunctionComponent, useCallback} from "react";
 import { IItem } from "../types";
 import ReportNavItem from "./ReportNavItem";
 import styles from "./ReportsNavigaton.module.scss";
@@ -6,11 +6,13 @@ import styles from "./ReportsNavigaton.module.scss";
 export interface ReportsNavigationProps {
   items: IItem[];
   activeMenuItemId: string;
+  onClick: any
 }
 
 const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
   items,
   activeMenuItemId,
+    onClick
 }) => {
   return (
     <>
@@ -20,6 +22,7 @@ const ReportsNavigation: FunctionComponent<ReportsNavigationProps> = ({
           activeMenuItemId={activeMenuItemId}
           key={item.id}
           item={item}
+          onClick = {() => onClick(item.id)}
         />
       ))}
     </>

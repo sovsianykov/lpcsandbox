@@ -5,9 +5,10 @@ import {ITabItem} from "../types";
 export interface TabItemProps {
     item: ITabItem;
     activeTabItemId: string;
+    onClick: any;
 }
 
-const TabItem:FunctionComponent<TabItemProps> = ({ item,activeTabItemId }) => {
+const TabItem:FunctionComponent<TabItemProps> = ({ item,activeTabItemId,onClick }) => {
     const classNames = useMemo(
         ()=>
             cn({
@@ -17,12 +18,10 @@ const TabItem:FunctionComponent<TabItemProps> = ({ item,activeTabItemId }) => {
         [activeTabItemId, item.id]
     );
 
-    const callbackHandler = useCallback(() => {
-        item.foo(item.id);
-    }, [item]);
+
     
     return (
-        <div className={classNames} onClick={callbackHandler}>
+        <div className={classNames} onClick={onClick}>
             {item.title}
         </div>
     );

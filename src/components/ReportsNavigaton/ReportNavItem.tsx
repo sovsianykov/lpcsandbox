@@ -10,15 +10,15 @@ import { IItem } from "../types";
 export interface ItemProps {
   item: IItem;
   activeMenuItemId: string;
+  onClick:any;
 }
 
 const ReportNavItem: FunctionComponent<ItemProps> = ({
   item,
   activeMenuItemId,
+    onClick
 }) => {
-  const callbackHandler = useCallback(() => {
-    item.foo(item.id);
-  }, [item]);
+
 
   const classNames = useMemo(
     () =>
@@ -30,7 +30,7 @@ const ReportNavItem: FunctionComponent<ItemProps> = ({
   );
 
   return (
-    <div className={classNames} onClick={callbackHandler}>
+    <div className={classNames} onClick ={onClick}>
       {item.title}
     </div>
   );
